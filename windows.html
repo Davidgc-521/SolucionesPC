@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows - Solución de Problemas</title>
+    <link rel="stylesheet" href="windows.css">
+    <link rel="icon" href="imagenes/descarga (1).png" type="image/png">
+    <!-- Íconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Menú principal -->
+    <nav id="menu">
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="android.html"><i class="fab fa-android"></i> Android</a></li>
+            <li><a href="internet.html"><i class="fas fa-globe"></i> Internet</a></li>
+            <li><a href="software.html"><i class="fas fa-cogs"></i> Software</a></li>
+            <li><a href="consejos.html"><i class="fas fa-lightbulb"></i> Consejos</a></li>
+            <li><a href="agenda.html"><i class="fas fa-envelope"></i> Agenda</a></li>
+        </ul>
+    </nav>
+
+    <!-- Barra lateral con enlaces internos -->
+    <aside class="indice">
+        <h3><i class="fas fa-list"></i> Índice</h3>
+        <ul>
+            <li><a href="#pantalla-azul">🧯 Pantalla Azul</a></li>
+            <li><a href="#error-80070005">⚠️ Error 0x80070005</a></li>
+            <li><a href="#Windows-lento">🐢💻 Windows lento – Cómo acelerarlo paso a paso 🚀</a></li>
+            <li><a href="#sin-sonido">🔇 No hay sonido en el equipo</a></li>
+            <li><a href="#wi-fi">🌐 Problemas de conexión Wi-Fi</a></li>
+            <li><a href="#barra-tareas">🧠 La barra de tareas o el menú de inicio no funcionan</a></li>
+            <li><a href="#archivos-x">🧾 Archivos que no se pueden eliminar</a></li>
+            <li><a href="#impresora-x">🖨️ La impresora no imprime</a></li>
+        </ul>
+    </aside>
+
+    <!-- Sección 1 -->
+    <section class="titulo" id="pantalla-azul">
+        <h2>🧯 Pantalla Azul de la Muerte (BSOD)</h2>
+    </section>
+
+    <section class="text">
+          <p><strong>¿Qué es la Pantalla Azul de la Muerte?</strong></p>
+        <p>La BSOD (Blue Screen of Death) es un error crítico que aparece cuando Windows encuentra un fallo del que no puede recuperarse automáticamente.</p>
+
+        <p><strong>¿Por qué ocurre?</strong></p>
+        <ul>
+            <li>Drivers incompatibles o dañados.</li>
+            <li>Fallos de hardware (RAM, disco duro).</li>
+            <li>Archivos del sistema dañados.</li>
+            <li>Sobrecalentamiento.</li>
+            <li>Malware o conflictos de software.</li>
+        </ul>
+
+        <p><strong>Soluciones paso a paso:</strong></p>
+        <ol>
+            <li><strong>Modo Seguro:</strong> Reinicia con <b>Shift + Reiniciar</b> &rarr; Opciones avanzadas &rarr; Configuración de inicio &rarr; F4/F5.</li>
+            <li><strong>Comando SFC:</strong> Ejecuta <code>sfc /scannow</code> en CMD como administrador.</li>
+            <li><strong>DISM:</strong> Usa <code>DISM /Online /Cleanup-Image /RestoreHealth</code> para reparar la imagen de Windows.</li>
+            <li><strong>BlueScreenView:</strong> Usa <a href="https://www.nirsoft.net/utils/blue_screen_view.html" target="_blank">esta herramienta</a> para analizar el código exacto del error.</li>
+            <li><strong>Restaurar sistema:</strong> Usa un punto de restauración previo desde el Panel de control.</li>
+        </ol>
+
+        <p><strong>✅ Recomendaciones:</strong></p>
+        <ul>
+            <li>Actualiza drivers (<a href="https://sdi-tool.org/" target="_blank">Snappy Driver</a> o desde el administrador).</li>
+            <li>Usa protección antimalware.</li>
+            <li>Evita software no confiable.</li>
+            <li>Limpieza física del equipo regularmente.</li>
+        </ul>
+    </section>
+
+    <!-- Sección 2 -->
+    <section class="titulo" id="error-80070005">
+        <h2>⚠️ Error 0x80070005 en Actualizaciones</h2>
+    </section>
+
+    <section class="text">
+        <p><strong>¿Qué es?</strong></p>
+        <p>Este error se produce cuando Windows Update no puede completar una actualización debido a problemas de permisos. Es conocido como “Access Denied” y puede aparecer en actualizaciones del sistema o instalación de apps desde la Microsoft Store.</p>
+
+        <p><strong>¿Por qué ocurre?</strong></p>
+        <ul>
+            <li>Falta de permisos de administrador.</li>
+            <li>Antivirus bloqueando procesos.</li>
+            <li>Archivos del sistema dañados.</li>
+            <li>Carpetas de Windows Update corruptas.</li>
+        </ul>
+
+        <p><strong>🛠️ Soluciones paso a paso:</strong></p>
+        <ol>
+            <li>✅ Ejecutar Windows Update como administrador.</li>
+            <li>Pulsa <strong><code>Win + I</code></strong> para abrir Configuración.</li>
+            <li>Ve a Actualización y seguridad > Windows Update.</li>
+            <li>Haz clic en “Buscar actualizaciones”.</li>
+            <li>Si da error, reinicia como Administrador y repite.</li>
+        </ol>
+
+        <p><strong>2. 🔍 Verifica integridad del sistema con SFC y DISM</strong></p>
+        <ol>
+            <li>Abre CMD como administrador.</li>
+            <li>Ejecuta: <strong><code>sfc /scannow</code></strong></li>
+            <li>Luego ejecuta: <strong><code>DISM /Online /Cleanup-Image /RestoreHealth</code></strong></li>
+        </ol>
+
+        <p><strong>3. 🔄 Restablece los componentes de Windows Update</strong></p>
+        <ul>
+            <li>Puedes hacerlo con este script por línea de comandos (copiar uno a uno en CMD admin):</li>
+            <li><strong><code>net stop wuauserv</code></strong></li>
+            <li><strong><code>net stop cryptSvc</code></strong></li>
+            <li><strong><code>net stop bits</code></strong></li>
+            <li><strong><code>net stop msiserver</code></strong></li>
+            <li><strong><code>ren C:\Windows\SoftwareDistribution SoftwareDistribution.old</code></strong></li>
+            <li><strong><code>ren C:\Windows\System32\catroot2 catroot2.old</code></strong></li>
+            <li><strong><code>net start wuauserv</code></strong></li>
+            <li><strong><code>net start cryptSvc</code></strong></li>
+            <li><strong><code>net start bits</code></strong></li>
+            <li><strong><code>net start msiserver</code></strong></li>
+        </ul>
+
+        <p><strong>4. 🛡️ Desactiva temporalmente tu antivirus</strong></p>
+        <ul>
+            <li>A veces, programas de seguridad como Avast o McAfee interfieren con las actualizaciones. Desactívalos mientras actualizas (recuerda volver a activarlos después).</li>
+        </ul>
+
+        <p><strong>5. 🧩 Usa el Solucionador de problemas</strong></p>
+        <ol>
+            <li>Ve a Configuración > Actualización y seguridad > Solucionar problemas.</li>
+            <li>Elige “Windows Update” y deja que el sistema intente repararse.</li>
+        </ol>
+
+        <p><strong>🔒 Recomendaciones para evitar el error</strong></p>
+        <ul>
+            <li>Usa siempre una cuenta con permisos de administrador.</li>
+            <li>Mantén tu sistema limpio con escaneos regulares de virus.</li>
+            <li>No detengas actualizaciones a la mitad.</li>
+            <li>Evita modificar permisos de carpetas del sistema si no sabes lo que haces.</li>
+        </ul>
+
+        <p><strong>🧾 Recursos útiles</strong></p>
+        <ul>
+            <li><a href="https://www.nirsoft.net/utils/blue_screen_view.html" target="_blank">BlueScreenView</a></li>
+            <li><a href="https://support.microsoft.com/es-es/windows/solucionador-de-problemas-de-windows-update-19bc41ca-ad72-ae67-af3c-89ce169755dd" target="_blank">Windows Update Troubleshooter oficial (Microsoft)</a></li>
+            <li><a href="https://answers.microsoft.com/en-us" target="_blank">Foros de Microsoft</a></li>
+        </ul>
+    </section>
+
+    <section class="titulo" id="Windows-lento">
+        <h2>🐢💻 Windows lento – Cómo acelerarlo paso a paso 🚀</h2>
+    </section>
+
+    <section class="text">
+        <p>¿Tu PC con Windows tarda una eternidad en arrancar, abrir programas o navegar por Internet? No te preocupes, aquí tienes una guía completa para acelerar tu computadora sin necesidad de formatear.</p>
+        
+        <p><strong>Síntomas comunes de una PC lenta</strong></p>
+        <ul>
+            <li> Inicio muy demorado (más de 2 minutos)</li>
+            <li> Programas que se congelan o no responden</li>
+            <li> Navegación por carpetas o internet muy lenta</li>
+            <li> Ventanas que tardan en abrir o cerrar</li>
+            <li> Retrasos en el audio o video</li>
+        </ul>
+        
+        <p><strong>¿Por qué Windows se vuelve lento?</strong></p>
+        <ul>
+            <li> Demasiados programas iniciando al encender</li>
+            <li> Poco espacio libre en el disco duro</li>
+            <li> Archivos del sistema dañados o desorganizados</li>
+            <li> RAM insuficiente o sobrecargada</li>
+            <li> Procesos en segundo plano consumiendo recursos</li>
+            <li> Malware, spyware o programas basura</li>
+            <li> Acumulación de archivos temporales y caché</li>
+        </ul>
+
+        <p><strong>✅ Soluciones paso a paso para acelerar Windows</strong></p>
+        <ol>
+            <li>1️⃣ Desactiva programas innecesarios al inicio Muchos programas se ejecutan al prender el PC sin necesidad. Pasos:</li>
+            <li>Presiona <strong><code>Ctrl + Shift + Esc</code></strong> para abrir el Administrador de tareas</li>
+            <li>Ve a la pestaña Inicio</li>
+            <li>Haz clic derecho sobre programas innecesarios (como Spotify, Zoom, OneDrive, etc.)</li>
+            <li>Selecciona Deshabilitar</li>
+            <li>Reinicia tu PC y notarás un arranque más rápido.</li>
+        </ol>
+
+        <p><strong>2️⃣ Limpia el disco y elimina basura</strong></p>
+
+        <p>Windows acumula archivos temporales y basura que ralentizan el sistema.</p>
+        <p><strong>Método 1:</strong> Liberador de espacio</p>
+
+        <ol>
+            <li>Pulsa <strong><code>Win + R</code></strong> , escribe cleanmgr y presiona Enter</li>
+            <li>Selecciona la unidad C:</li>
+            <li>Marca todas las casillas (incluyendo archivos temporales)</li>
+            <li>Presiona Aceptar</li>
+        </ol>
+
+        <p><strong>Método 2</strong> (más potente):</p>
+
+        <ol>
+            <li>Usa <a href="https://www.ccleaner.com/es-es/ccleaner" target="_blank">CCleaner</a> para una limpieza más profunda</li>
+        </ol>
+
+        <p><strong>3️⃣ Desinstala programas que no usas</strong></p>
+        <p>Muchos programas que ya no usas siguen ocupando espacio y recursos.</p>
+        <p>Pasos:</p>
+
+        <ul>
+            <li>Ve a <strong><code>Configuración → Aplicaciones → Aplicaciones y características</code></strong></li>
+            <li>Ordena por tamaño o fecha</li>
+            <li>Desinstala lo que no necesites (con precaución)</li>
+        </ul>
+
+        <p><strong>4️⃣ Aumenta la memoria virtual (archivo de paginación)</strong></p>
+        <p>Esto ayuda si tienes poca RAM.</p>
+        <p>Pasos:</p>
+
+        <ol>
+            <li>Ve a <strong><code>Panel de control → Sistema → Configuración avanzada del sistema</code></strong></li>
+            <li>Pestaña Opciones avanzadas → Rendimiento → Configuración</li>
+            <li>Ve a Memoria virtual → Cambiar</li>
+            <li>Desmarca “Administrar automáticamente”</li>
+            <li>Elige <strong>Tamaño personalizado</strong></li>
+            <p>Ejemplo: si tienes 4 GB de RAM, pon mínimo 4096 y máximo 8192</p>
+            <li>Acepta y reinicia</li>
+        </ol>
+
+        <p><strong>5️⃣ Actualiza tus drivers y el sistema operativo</strong></p>
+
+        <ul>
+            <li>Abre <strong><code>Windows Update</code></strong> y busca actualizaciones</li>
+            <li>Usa <a href="https://sdi-tool.org/" target="_blank">Snappy Driver Installer</a> para actualizar controladores desactualizados (especialmente video, red y sonido)</li>
+        </ul>
+
+        <p><strong>6️⃣ Desfragmenta el disco duro (solo si es HDD)</strong></p>
+        <p>|❗ No lo hagas si usas SSD, ya que acorta su vida útil.</p>
+        <p>Pasos:</p>
+
+        <ol>
+            <li>Pulsa <strong><code>Win + S</code></strong> y busca “Desfragmentar”</li>
+            <li>Selecciona tu disco duro (C:)</li>
+            <li>Haz clic en <strong>Optimizar</strong></li>
+        </ol>
+
+        <p><strong>7️⃣ Instala un SSD si usas HDD</strong></p>
+        <p>Esto multiplica la velocidad de arranque, carga de programas y navegación.</p>
+        <p>Ejemplo:</p>
+
+        <ul>
+            <li>HDD: inicia en 1-3 minutos</li>
+            <li>SSD: inicia en 10-20 segundos</li>
+        </ul>
+
+        <p><strong>8️⃣ Escanea y elimina virus o malware</strong></p>
+
+        <ul>
+            <li>Usa Windows Defender o Malwarebytes</li>
+            <li>Realiza un análisis completo</li>
+            <li>Elimina amenazas y reinicia</li>
+        </ul>
+
+        <p><strong>🧠 Consejos finales para mantener Windows rápido:</strong></p>
+
+        <ul>
+            <li> Reinicia al menos una vez al día si usas mucho la PC</li>
+            <li> No instales software innecesario</li>
+            <li> Desactiva efectos visuales si tienes un PC antiguo</li>
+            <li> Revisa el uso de CPU y RAM en el Administrador de tareas</li>
+        </ul>
+    </section>
+
+    <section class="titulo" id="sin-sonido">
+        <h2>🔇 No hay sonido en el equipo</h2>
+    </section> 
+
+    <section class="text">
+        <p><strong>¿Qué pasa?</strong></p>
+        <p>No escuchas nada, ni música, ni notificaciones, ni sonido del sistema. Esto puede deberse a una mala configuración o a un problema con el controlador de sonido.</p>
+
+        <p><strong>Causas comunes:</strong></p>
+
+        <ul>
+            <li>Conectores mal enchufados o salida de audio equivocada.</li>
+            <li>Auriculares o parlantes defectuosos.</li>
+            <li>Drivers desactualizados o incompatibles.</li>
+        </ul>
+
+        <p><strong>Soluciones:</strong></p>
+
+        <ol>
+            <li>Revisa que el volumen no esté en silencio o demasiado bajo.</li>
+            <li>Ejecuta el Solucionador de problemas de sonido de Windows.</li>
+            <li>En el Administrador de dispositivos, actualiza o reinstala el driver de sonido.</li>
+            <li>Si tienes auriculares Bluetooth, desvincúlalos y vuelve a conectarlos.</li>
+        </ol>
+    </section>
+
+    <section class="titulo" id="wi-fi">
+        <h2>🌐 Problemas de conexión Wi-Fi</h2>
+    </section>
+
+    <section class="text">
+        <p><strong>¿Qué ocurre?</strong></p>
+        <p>No puedes conectarte a internet, aparece el ícono con la cruz roja o amarilla, o el Wi-Fi se desconecta constantemente.</p>
+        <p><strong>Causas comunes:</strong></p>
+
+        <ul>
+            <li>Fallos en el adaptador de red.</li>
+            <li>IP mal configurada o conflicto de red.</li>
+            <li>Antivirus o firewall interfiriendo con la conexión.</li>
+        </ul>
+
+        <p><strong>Soluciones:</strong></p>
+
+        <ol>
+            <li>Reinicia el router y el PC.</li>
+            <li>Abre CMD como administrador y ejecuta: <strong><code>netsh winsock reset</code></strong> <strong><code>ipconfig /flushdns</code></strong></li>
+            <li>Desinstala y reinstala el adaptador Wi-Fi desde el Administrador de dispositivos.</li>
+            <li>Usa el Solucionador de problemas de red.</li>
+        </ol>
+
+    </section>
+
+    <section class="titulo" id="barra-tareas">
+        <h2>🧠 La barra de tareas o el menú de inicio no funcionan</h2>
+    </section>
+
+    <section class="text">
+        <p><strong>¿Qué pasa?</strong></p>
+        <p>El menú de inicio no responde al hacer clic, o la barra de tareas está congelada.</p>
+        <p><strong>Causas comunes:</strong></p>
+
+        <ul>
+            <li>Fallo del proceso <strong><code>explorer.exe</code></strong></li>
+            <li>Actualizaciones fallidas.</li>
+            <li>Problemas en los archivos del sistema.</li>
+        </ul>
+
+        <p><strong>Soluciones:</strong></p>
+
+        <ol>
+            <li>Reinicia el proceso desde el administrador de tareas: <strong><code>Ctrl + Shift + Esc → Busca “Explorador de Windows” → Reiniciar</code></strong></li>
+            <li>Ejecuta: <strong><code>sfc /scannow</code></strong></li>
+            <li>Verifica si hay actualizaciones pendientes en Configuración.</li>
+        </ol>
+    </section>
+
+    <section class="titulo" id="archivos-x">
+        <h2>🧾 Archivos que no se pueden eliminar</h2>
+    </section>
+
+    <section class="text">
+        <p><strong>¿Qué ocurre?</strong></p>
+        <p>Intentas borrar un archivo o carpeta y Windows muestra que está “en uso” o que necesitas permisos, aunque seas el administrador.</p>
+        <p><strong>Causas comunes:</strong></p>
+
+        <ul>
+            <li>El archivo está abierto en segundo plano.</li>
+            <li>Faltan permisos de usuario.</li>
+            <li>Daños en el sistema de archivos.</li>
+        </ul>
+
+        <p><strong>Soluciones:</strong></p>
+
+        <ol>
+            <li>Reinicia el equipo y vuelve a intentarlo.</li>
+            <li>Usa un programa como Unlocker o LockHunter.</li>
+            <li>En CMD como admin: <strong><code>takeown /f "C:\Ruta\Archivo" /r /d y</code></strong></li>
+        </ol>
+    </section>
+
+    <section class="titulo" id="impresora-x">
+        <h2>🖨️ La impresora no imprime</h2>
+    </section>
+
+    <section class="text">
+        <p><strong>¿Qué pasa?</strong></p>
+        <p>Envías documentos a imprimir pero no ocurre nada, o se quedan atascados en la cola de impresión.</p>
+        <p><strong>Causas comunes:</strong></p>
+
+        <ul>
+            <li>Servicio de impresión congelado.</li>
+            <li>Driver mal instalado.</li>
+            <li>Conexión USB o Wi-Fi inestable.</li>
+        </ul>
+
+        <p><strong>Soluciones:</strong></p>
+
+        <ol>
+            <li>Reinicia el servicio: <strong><code>Win + R → services.msc → Cola de impresión → Reiniciar</code></strong></li>
+            <li>Reinstala el driver desde la web oficial de tu impresora.</li>
+            <li>Usa el solucionador de problemas de impresión de Windows.</li>
+        </ol>
+    </section>
+
+<footer class="footer">
+    <div class="footer-content">
+        <p>💻 Sitio creado con pasión por la tecnología.</p>
+        <p>🔗 Recursos útiles:
+            <a href="https://developer.mozilla.org/es/" target="_blank">MDN Web Docs</a> |
+            <a href="https://openai.com" target="_blank">OpenAI</a> |
+            <a href="https://github.com" target="_blank">GitHub</a>
+        </p>
+        <p>📬 Contacto: <a href="mailto:tuemail@ejemplo.com">email@.com</a></p>
+        <p>© 2025 SolucionesPC. Todos los derechos reservados.</p>
+    </div>
+</footer>
+    
+</body>
+</html>

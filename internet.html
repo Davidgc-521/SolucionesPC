@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="internet.css">    <!-- Enlace a la hoja de estilos externa -->
+    <link rel="icon" href="imagenes\descarga (1).png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Internet - Solución de Problemas</title>
+</head>
+<body>
+    
+<div id="menu">
+				<ul>
+          <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+					<li><a href="windows.html"><i class="fab fa-windows"></i> Windows</a></li>
+					<li><a href="android.html"><i class="fab fa-android"></i> Android</a></li>
+          <li><a href="software.html"><i class="fas fa-cogs"></i> Software</a></li>
+          <li><a href="consejos.html"><i class="fas fa-lightbulb"></i> Consejos</a></li>
+					<li><a href="agenda.html"><i class="fas fa-envelope"></i> Agenda</a></li>
+				</ul>
+</div>
+
+<aside class="indice">
+        <h3><i class="fas fa-list"></i> Índice</h3>
+        <ul>
+            <li><a href="#conectado-xwifi">📶 Conectado pero sin acceso a Internet</a></li>
+            <li><a href="#no-aparece">🚫 El Wi-Fi no aparece o no se conecta</a></li>
+            <li><a href="#internet-lento">🐢 Internet muy lento (descargas eternas o videos que cargan lento)</a></li>
+            <li><a href="#problemas-red">🔒 Problemas con la red en Windows (icono con cruz o signo amarillo)</a></li>
+            <li><a href="#problemas-datos">🔗 Problemas con los datos móviles (Android/iPhone)</a></li>
+            <li><a href="#error-DNS">❌ Algunas páginas no cargan o dan error DNS</a></li>
+            <li><a href="#recom">🧠 Consejo extra: cómo mejorar tu red Wi-Fi en casa</a></li>
+        </ul>
+</aside>
+
+<section class="titulo" id="conectado-xwifi">
+    <h2>📶 Conectado pero sin acceso a Internet</h2>
+</section>
+
+<section class="text">
+    <p><strong>¿Qué pasa?</strong></p>
+    <p>Tu dispositivo se conecta al Wi-Fi, pero no puedes navegar ni abrir apps como YouTube o WhatsApp.</p>
+    <p><strong>Causas comunes:</strong></p>
+
+    <ul>
+        <li>El router está conectado, pero no tiene acceso a internet.</li>
+        <li>Problemas de DNS o IP mal asignada.</li>
+        <li>Fallo temporal del proveedor de internet (ISP).</li>
+    </ul>
+
+    <p><strong>Soluciones:</strong></p>
+
+    <ol>
+        <li>Reinicia el router y el dispositivo (apaga 30 segundos y vuelve a encender).</li>
+        <li>Olvida la red y conéctate de nuevo:</li>
+        <p>Ajustes → Wi-Fi → Mantén pulsado tu red → “Olvidar”.</p>
+        <li>Cambia a DNS de Google:</li>
+        <p>8.8.8.8 y 8.8.4.4 (en Configuración > Avanzado > DNS).</p>
+        <li>En PC, abre CMD como admin y escribe:</li>
+        <p><strong><code>ipconfig /flushdns</code></strong></p>
+        <p><strong><code>netsh winsock reset</code></strong></p>
+    </ol>
+</section>
+
+<section class="titulo" id="no-aparece">
+    <h2>🚫 El Wi-Fi no aparece o no se conecta</h2>
+</section>
+
+<section class="text">
+    <p><strong>¿Qué ocurre?</strong></p>
+    <p>No ves tu red Wi-Fi o el dispositivo no logra conectarse aunque esté cerca del router.</p>
+    <p><strong>Causas comunes:</strong></p>
+
+    <ul>
+        <li>Interferencias o señal débil.</li>
+        <li>Red oculta o fuera de alcance.</li>
+        <li>Router bloqueando el dispositivo por MAC.</li>
+    </ul>
+
+    <p><strong>Soluciones:</strong></p>
+
+    <ol>
+        <li>Acércate al router y verifica que esté encendido.</li>
+        <li>Asegúrate de que el Wi-Fi esté activado en tu equipo.</li>
+        <li>Reinicia router y equipo.</li>
+        <li>Comprueba que no esté usando filtro MAC desde la configuración del router.</li>
+        <li>Si la red es oculta, conéctate manualmente escribiendo el nombre (SSID) y clave.</li>
+    </ol>
+</section>
+
+<section class="titulo" id="internet-lento">
+    <h2>🐢 Internet muy lento (descargas eternas o videos que cargan lento)</h2>
+</section>
+
+<section class="text">
+    <p><strong>¿Qué pasa?</strong></p>
+    <p>La velocidad es muy baja, tarda en cargar páginas o los videos se detienen constantemente.</p>
+    <p><strong>Causas comunes:</strong></p>
+
+    <ul>
+        <li>Muchas personas conectadas a la misma red.</li>
+        <li>Saturación del router o interferencia.</li>
+        <li>Malware en algún dispositivo consumiendo red.</li>
+    </ul>
+
+    <p><strong>Soluciones:</strong></p>
+
+    <ol>
+        <li>Verifica cuántos dispositivos están conectados.</li>
+        <p>(Puedes hacerlo desde la app del router o su IP: 192.168.0.1 / 192.168.1.1)</p>
+        <li>Reinicia el router para limpiar la memoria.</li>
+        <li>Cierra apps de descargas o streaming en segundo plano.</li>
+        <li>Realiza un test de velocidad: <a href="https://fast.com/es/" target="_blank">fast.com</a> o <a href="https://www.speedtest.net/" target="_blank">speedtest.net</a></li>
+        <li>Escanea todos los equipos por malware (que pueden consumir la red).</li>
+    </ol>
+</section>
+
+<section class="titulo" id="problemas-red">
+    <h2>🔒 Problemas con la red en Windows (icono con cruz o signo amarillo)</h2>
+</section>
+
+<section class="text">
+    <p><strong>¿Qué ocurre?</strong></p>
+    <p>En la bandeja de red aparece una cruz roja o signo de exclamación en amarillo.</p>
+    <p><strong>Causas comunes:</strong></p>
+
+    <ul>
+        <li>Fallo en el adaptador de red.</li>
+        <li>Controlador de red dañado o desactualizado.</li>
+        <li>Configuración incorrecta de red.</li>
+    </ul>
+
+    <p><strong>Soluciones:</strong></p>
+
+    <ol>
+        <li>Reinicia el adaptador:</li>
+        <p>Inicio → Configuración → Red e Internet → Cambiar opciones del adaptador → Clic derecho > Desactivar y luego Activar</p>
+        <li>CMD como administrador:</li>
+        <p><strong><code>netsh int ip reset</code></strong></p>
+        <p><strong><code>ipconfig /release</code></strong></p>
+        <p><strong><code>ipconfig /renew</code></strong></p>
+        <li>Actualiza el controlador desde el Administrador de dispositivos.</li>
+        <li>Restablece la configuración de red:</li>
+        <p>Configuración → Sistema → Restablecer red</p>
+    </ol>
+</section>
+
+<section class="titulo" id="problemas-datos">
+    <h2>🔗 Problemas con los datos móviles (Android/iPhone)</h2>
+</section>
+
+<section class="text">
+    <p><strong>¿Qué pasa?</strong></p>
+    <p>Tienes señal, pero no puedes navegar con datos móviles, o aparecen errores como "No se pudo conectar".</p>
+    <p><strong>Causas comunes:</strong></p>
+
+    <ul>
+        <li>Límite de datos alcanzado</li>
+        <li>Configuración de APN incorrecta</li>
+        <li>Error del operador móvil</li>
+    </ul>
+
+    <p><strong>Soluciones:</strong></p>
+
+    <ol>
+        <li>Activa y desactiva el modo avión.</li>
+        <li>Revisa los ajustes de APN:</li>
+        <p>Configuración → Redes móviles → Nombres de punto de acceso (APN)</p>
+        <p>Si están vacíos o incorrectos, búscalos en la web de tu operador.</p>
+        <li>Verifica si tienes saldo o datos disponibles.</li>
+        <li>Restablece configuración de red.</li>
+    </ol>
+</section>
+
+<section class="titulo" id="error-DNS">
+    <h2>❌ Algunas páginas no cargan o dan error DNS</h2>
+</section>
+
+<section class="text">
+    <p><strong>¿Qué ocurre?</strong></p>
+    <p>Intentas entrar a páginas como Google o YouTube y no cargan, mientras otras sí.</p>
+    <p><strong>Causas comunes:</strong></p>
+
+    <ul>
+        <li>DNS del proveedor está caído</li>
+        <li>Sitios bloqueados por el firewall o antivirus</li>
+        <li>Redireccionamiento por malware</li>
+    </ul>
+
+    <p><strong>Soluciones:</strong></p>
+
+    <ol>
+        <li>Cambia el DNS por uno confiable:</li>
+        <p>Google: <strong><code>8.8.8.8</code></strong> y <strong><code>8.8.4.4</code></strong></p>
+        <p>Cloudflare: <strong><code>1.1.1.1</code></strong></p>
+        <li>Desactiva temporalmente el antivirus y prueba si cargan.</li>
+        <li>Usa Malwarebytes o AdwCleaner para eliminar posibles infecciones.</li>
+        <li>Borra la caché DNS:</li>
+        <p>En Windows: <strong><code>ipconfig /flushdns</code></strong></p>
+    </ol>
+</section>
+
+<section class="titulo" id="recom">
+    <h2>🧠 Consejo extra: cómo mejorar tu red Wi-Fi en casa</h2>
+</section>
+
+<section class="text">
+    <p>Coloca el router en el centro de la casa y en alto.</p>
+    <p>No lo pongas junto a electrodomésticos grandes ni en cajones cerrados.</p>
+    <p>Cambia de canal Wi-Fi (desde el router) si hay interferencia con otras redes.</p>
+    <p>Considera un repetidor Wi-Fi si la señal no llega a todos los rincones.</p>
+</section>
+
+<footer class="footer">
+    <div class="footer-content">
+        <p>💻 Sitio creado con pasión por la tecnología.</p>
+        <p>🔗 Recursos útiles:
+            <a href="https://developer.mozilla.org/es/" target="_blank">MDN Web Docs</a> |
+            <a href="https://openai.com" target="_blank">OpenAI</a> |
+            <a href="https://github.com" target="_blank">GitHub</a>
+        </p>
+        <p>📬 Contacto: <a href="mailto:tuemail@ejemplo.com">email@.com</a></p>
+        <p>© 2025 SolucionesPC. Todos los derechos reservados.</p>
+    </div>
+</footer>
+  
+</body>
+</html>

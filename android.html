@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="android.css">    <!-- Enlace a la hoja de estilos externa -->
+    <link rel="icon" href="imagenes\descarga (1).png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Android - Solución de Problemas</title>
+</head>
+<body>
+    
+<div id="menu">
+				<ul>
+          <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+					<li><a href="windows.html"><i class="fab fa-windows"></i> Windows</a></li>
+          <li><a href="internet.html"><i class="fas fa-globe"></i> Internet</a></li>
+          <li><a href="software.html"><i class="fas fa-cogs"></i> Software</a></li>
+          <li><a href="consejos.html"><i class="fas fa-lightbulb"></i> Consejos</a></li>
+					<li><a href="agenda.html"><i class="fas fa-envelope"></i> Agenda</a></li>
+				</ul>
+	</div>
+
+  <aside class="indice">
+        <h3><i class="fas fa-list"></i> Índice</h3>
+        <ul>
+            <li><a href="#telefono-apagado">📱 El teléfono se queda pegado o no responde</a></li>
+            <li><a href="#crasheo">📥 Las apps se cierran solas (crashean)</a></li>
+            <li><a href="#bateria-x">🔋 La batería se descarga muy rápido</a></li>
+            <li><a href="#no-conexion">🌐 No hay conexión a internet aunque el Wi-Fi esté activado</a></li>
+            <li><a href="#camara-negro">📷 La cámara no funciona o muestra pantalla negra</a></li>
+            <li><a href="#memoria-llena">📦 “Almacenamiento lleno” aunque borraste archivos</a></li>
+            <li><a href="#reinicio-solo">🔄 El teléfono se reinicia solo</a></li>
+            <li><a href="#problemas-metricos">🔐 Problemas con huella o reconocimiento facial</a></li>
+            <li><a href="#recomendaciones">📌 Recomendación final</a></li>
+          </ul>
+</aside>
+
+  <section class="titulo" id="telefono-apagado">
+    <h2>📱 El teléfono se queda pegado o no responde</h2>
+  </section>
+
+  <section class="text">
+    <p><strong>¿Qué ocurre?</strong></p>
+    <p>La pantalla se congela, las apps dejan de responder o el sistema va demasiado lento. Suele pasar en teléfonos con poca RAM o por apps que consumen muchos recursos.</p>
+    <p><strong>Causas comunes:</strong></p>
+
+    <ul>
+      <li>Demasiadas apps abiertas en segundo plano</li>
+      <li>Actualizaciones mal instaladas</li>
+      <li>Poca memoria disponible</li>
+      <li>Problemas del sistema operativo</li>
+    </ul>
+
+    <p><strong>Soluciones:</strong></p>
+
+    <ol>
+      <li>Mantén presionado el botón de encendido por 10–15 segundos para forzar un reinicio.</li>
+      <li>Libera memoria: cierra apps recientes y elimina archivos grandes o duplicados.</li>
+      <li>Borra caché del sistema (desde Configuración → Almacenamiento → Datos en caché).</li>
+      <li>Si persiste, entra en modo seguro para identificar apps que estén causando fallos.</li>
+      <p>(Mantén presionado el botón de encendido → luego mantén presionado “Apagar” hasta que salga la opción “Reiniciar en modo seguro”)</p>
+    </ol>
+  </section>
+
+  <section class="titulo" id="crasheo">
+    <h2>📥 Las apps se cierran solas (crashean)</h2>
+  </section>
+
+  <section class="text">
+    <p><strong>¿Qué pasa?</strong></p>
+    <p>Abres una app como YouTube, WhatsApp o Instagram y se cierra inmediatamente.</p>
+    <p><strong>Causas comunes:</strong></p>
+
+    <ul>
+      <li>Caché corrupta</li>
+      <li>Problemas de compatibilidad tras una actualización</li>
+      <li>Versión vieja de la app o del sistema</li>
+    </ul>
+
+    <p><strong>Soluciones:</strong></p>
+
+    <ol>
+      <li>Ve a Configuración → Aplicaciones → [nombre de la app]</li>
+      <li>Toca en “Almacenamiento” → “Borrar caché”</li>
+      <li>Si no mejora, selecciona también “Borrar datos” (esto reinicia la app)</li>
+      <li>Actualiza la app desde Google Play</li>
+      <li>Si el error es global (afecta a muchas apps), actualiza Android WebView desde la Play Store</li>
+    </ol>
+  </section>
+
+  <section class="titulo" id="bateria-x">
+    <h2>🔋 La batería se descarga muy rápido</h2>
+  </section>
+
+  <section class="text">
+    <p><strong>¿Qué pasa?</strong></p>
+    <p>Tu celular se descarga incluso sin usarlo, o la batería baja del 100% al 50% en minutos.</p>
+    <p><strong>Causas comunes:</strong></p>
+
+    <ul>
+      <li>Apps en segundo plano consumiendo energía</li>
+      <li>Brillo alto, ubicación, Bluetooth o Wi-Fi siempre activos</li>
+      <li>Batería deteriorada (muy común en equipos antiguos)</li>
+    </ul>
+
+    <p><strong>Soluciones:</strong></p>
+
+    <ol>
+      <li>Revisa el consumo en: Configuración → Batería → Uso de batería</li>
+      <li>Desinstala o limita apps que consumen en segundo plano (como Facebook o TikTok)</li>
+      <li>Activa modo ahorro de batería</li>
+      <li>Desactiva funciones que no uses (Bluetooth, GPS, sincronización automática)</li>
+      <li>Considera reemplazar la batería si el equipo tiene más de 2 años</li>
+    </ol>
+  </section>
+
+  <section class="titulo" id="no-conexion">
+    <h2>🌐 No hay conexión a internet aunque el Wi-Fi esté activado</h2>
+  </section>
+
+  <section class="text">
+    <p><strong>¿Qué ocurre?</strong></p>
+    <p>Tu teléfono dice “Conectado, sin internet” o no carga páginas aunque estés en una red Wi-Fi.</p>
+    <p><strong>Causas comunes:</strong></p>
+
+    <ul>
+      <li>Router sin acceso real a internet</li>
+      <li>IP mal asignada</li>
+      <li>Caché de red dañada</li>
+    </ul>
+
+    <p><strong>Soluciones:</strong></p>
+
+    <ol>
+      <li>Reinicia el router y el teléfono</li>
+      <li>Ve a Configuración → Wi-Fi → Mantén presionado tu red → Olvidar red y vuelve a conectarte</li>
+      <li>Si sigue sin funcionar, ve a:</li>
+      <p>Configuración → Sistema → Restablecer → Restablecer configuración de red</p>
+      <li>Si usas datos móviles y no navegas, activa y desactiva modo avión</li>
+    </ol>
+  </section>
+
+  <section class="titulo" id="camara-negro">
+    <h2>📷 La cámara no funciona o muestra pantalla negra</h2>
+  </section>
+
+  <section class="text">
+    <p><strong>¿Qué pasa?</strong></p>
+    <p>La cámara no abre, se cierra sola o muestra la pantalla negra sin imagen.</p>
+    <p><strong>Causas comunes:</strong></p>
+
+    <ul>
+      <li>Otra app está usando la cámara (Instagram, Zoom, etc.)</li>
+      <li>Permisos denegados</li>
+      <li>Fallo del software de cámara</li>
+    </ul>
+
+    <p><strong>Soluciones:</strong></p>
+
+    <ol>
+      <li>Cierra todas las apps en segundo plano</li>
+      <li>Ve a Configuración → Aplicaciones → Cámara → Borrar caché y datos</li>
+      <li>Verifica que tenga permisos activados:</li>
+      <p>Configuración → Privacidad → Permisos de apps → Cámara</p>
+      <li>Reinicia el dispositivo</li>
+      <li>Si no funciona, prueba una app de cámara alternativa desde Google Play</li>
+    </ol>
+  </section>
+
+  <section class="titulo" id="memoria-llena">
+    <h2>📦 “Almacenamiento lleno” aunque borraste archivos</h2>
+  </section>
+
+  <section class="text">
+    <p><strong>¿Qué ocurre?</strong></p>
+    <p>Aparece la notificación de almacenamiento lleno, pero no tienes tantas cosas guardadas.</p>
+    <p><strong>Causas comunes:</strong></p>
+
+    <ul>
+      <li>Caché y archivos temporales ocultos</li>
+      <li>Archivos duplicados o carpetas sin uso</li>
+      <li>WhatsApp llenando el almacenamiento con imágenes, videos y audios</li>
+    </ul>
+
+    <p><strong>Soluciones:</strong></p>
+
+    <ol>
+      <li>Usa Configuración → Almacenamiento → Liberar espacio</li>
+      <li>Borra la caché de apps grandes (Facebook, TikTok, navegador, etc.)</li>
+      <li>Usa herramientas como Files by Google para eliminar basura y archivos repetidos</li>
+      <li>Ve a WhatsApp → Ajustes → Almacenamiento y datos → Administrar almacenamiento</li>
+    </ol>
+  </section>
+
+  <section class="titulo" id="reinicio-solo">
+    <h2>🔄 El teléfono se reinicia solo</h2>
+  </section>
+
+  <section class="text">
+    <p><strong>¿Qué pasa?</strong></p>
+    <p>Tu dispositivo se apaga y se reinicia sin razón aparente.</p>
+    <p><strong>Causas comunes:</strong></p>
+
+    <ul>
+      <li>Sobrecalentamiento</li>
+      <li>Apps con errores</li>
+      <li>Problemas con actualizaciones</li>
+      <li>Fallo de hardware o batería dañada</li>
+    </ul>
+
+    <p><strong>Soluciones:</strong></p>
+
+    <ol>
+      <li>Identifica si ocurre con alguna app específica</li>
+      <li>Entra en modo seguro y revisa si el problema continúa</li>
+      <li>Actualiza el sistema operativo si hay versiones disponibles</li>
+      <li>Si el equipo se calienta mucho, evita usarlo mientras carga</li>
+      <li>Si los reinicios persisten, considera hacer un restablecimiento de fábrica (previo respaldo)</li>
+    </ol>
+  </section>
+
+  <section class="titulo" id="problemas-metricos">
+    <h2>🔐 Problemas con huella o reconocimiento facial</h2>
+  </section>
+
+  <section class="text">
+    <p><strong>¿Qué ocurre?</strong></p>
+    <p>Tu huella no es reconocida o el reconocimiento facial falla constantemente.</p>
+    <p><strong>Causas comunes:</strong></p>
+
+    <ul>
+      <li>Sensor sucio o dañado</li>
+      <li>Cambios en el rostro (barba, gafas)</li>
+      <li>Configuración alterada tras actualización</li>
+    </ul>
+
+    <p><strong>Soluciones:</strong></p>
+
+    <ol>
+      <li>Limpia el sensor con un paño seco</li>
+      <li>Borra las huellas y agrégalas de nuevo desde Configuración → Seguridad → Huella digital</li>
+      <li>Si es facial, escanea de nuevo tu rostro en buena luz</li>
+      <li>Reinicia el equipo</li>
+      <li>Actualiza el software del sistema</li>
+    </ol>
+  </section>
+
+  <section class="titulo" id="recomendaciones">
+    <h2>📌 Recomendación final</h2>
+  </section>
+
+  <section class="text">
+    <p>Android es un sistema muy flexible, y cada modelo ofrece herramientas únicas (Samsung, Xiaomi, Motorola, etc.). Tómate tiempo para explorar los ajustes, activar funciones útiles y desactivar lo que no necesitas.</p>
+    <p><strong>¡Un celular bien configurado no solo funciona mejor, también dura más! 😉</strong></p>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+        <p>💻 Sitio creado con pasión por la tecnología.</p>
+        <p>🔗 Recursos útiles:
+            <a href="https://developer.mozilla.org/es/" target="_blank">MDN Web Docs</a> |
+            <a href="https://openai.com" target="_blank">OpenAI</a> |
+            <a href="https://github.com" target="_blank">GitHub</a>
+        </p>
+        <p>📬 Contacto: <a href="mailto:tuemail@ejemplo.com">email@.com</a></p>
+        <p>© 2025 SolucionesPC. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+</body>
+</html>
